@@ -1,3 +1,3 @@
-# tanstack-router-vite-ts
+# hono-react-ssr
 
-React app with Tanstack Router starter template
+Fullstack React app with Tanstack Router and Hono

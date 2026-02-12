@@ -1,22 +1,25 @@
 {
-  "name": "@gglennd/tanstack-router-vite-ts",
+  "name": "@gglennd/hono-react-ssr",
   "type": "module",
   "private": true,
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "vite build --ssr && vite build",
     "lint": "eslint .",
     "lint:fix": "eslint --fix",
     "preview": "vite preview"
   },
   "dependencies": {
     "@tanstack/react-router": "^1.159.5",
+    "hono": "^4.11.9",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^7.4.3",
     "@eslint-react/eslint-plugin": "^2.12.4",
+    "@hono/vite-dev-server": "^0.25.0",
+    "@tanstack/react-router-devtools": "^1.159.5",
     "@tanstack/router-plugin": "^1.159.5",
     "@types/node": "^24.10.1",
     "@types/react": "^19.2.7",

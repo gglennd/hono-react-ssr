@@ -1,9 +1,34 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useState } from "react";
 
 export const Route = createFileRoute("/")({
   component: RouteComponent,
+  loader({ context: { name } }) {
+    if (!name) {
+      return { name: "Guest" };
+    }
+
+    return { name };
+  },
 });
 
 function RouteComponent() {
-  return <div>Hello "/"!</div>;
+  const data = Route.useLoaderData();
+  const [count, setCount] = useState(0);
+
+  return (
+    <>
+      <p>
+        Hello
+        {" "}
+        {data.name}
+      </p>
+      <button onClick={() => setCount(count => count + 1)}>
+        count is
+        {" "}
+        {count}
+      </button>
+    </>
+
+  );
 }
