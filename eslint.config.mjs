@@ -10,6 +10,9 @@ export default antfu({
     semi: true,
     quotes: "double",
   },
+  ignores: [
+    "./src/routeTree.gen.ts",
+  ],
 }, {
   rules: {
     "perfectionist/sort-imports": ["error", {

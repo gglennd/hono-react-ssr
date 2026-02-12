@@ -1,5 +1,5 @@
 {
-  "name": "@gglennd/react-vite-ts",
+  "name": "@gglennd/tanstack-router-vite-ts",
   "type": "module",
   "private": true,
   "scripts": {
@@ -10,12 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tanstack/react-router": "^1.159.5",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^7.4.3",
     "@eslint-react/eslint-plugin": "^2.12.4",
+    "@tanstack/router-plugin": "^1.159.5",
     "@types/node": "^24.10.1",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",

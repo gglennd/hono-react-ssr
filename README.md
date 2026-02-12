@@ -1,3 +1,3 @@
-# react-vite-ts
+# tanstack-router-vite-ts
 
-React app starter template
+React app with Tanstack Router starter template
