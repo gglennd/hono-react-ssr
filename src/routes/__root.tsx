@@ -9,6 +9,8 @@ import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
 
 import type { Context } from "../context";
 
+import appCss from "../styles/global.css?url";
+
 export const Route = createRootRouteWithContext<Context>()({
   head: () => ({
     meta: [
@@ -23,6 +25,7 @@ export const Route = createRootRouteWithContext<Context>()({
         content: "width=device-width, initial-scale=1.0",
       },
     ],
+    links: [{ rel: "stylesheet", href: appCss }],
     scripts: [
       ...(!import.meta.env.PROD
         ? [

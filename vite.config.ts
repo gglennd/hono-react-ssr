@@ -1,6 +1,7 @@
 import type { BuildEnvironmentOptions } from "vite";
 
 import devServer, { defaultOptions } from "@hono/vite-dev-server";
+import tailwindcss from "@tailwindcss/vite";
 import { tanstackRouter } from "@tanstack/router-plugin/vite";
 import react from "@vitejs/plugin-react";
 import path from "node:path";
@@ -58,6 +59,7 @@ export default defineConfig(({ mode, isSsrBuild }) => {
       port: Number(env.PORT) || 3000,
     },
     plugins: [
+      tailwindcss(),
       tanstackRouter({
         target: "react",
         autoCodeSplitting: true,
