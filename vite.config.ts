@@ -58,6 +58,11 @@ export default defineConfig(({ mode, isSsrBuild }) => {
     server: {
       port: Number(env.PORT) || 3000,
     },
+    resolve: {
+      alias: {
+        "@": path.resolve(__dirname, "./src"),
+      },
+    },
     plugins: [
       tailwindcss(),
       tanstackRouter({

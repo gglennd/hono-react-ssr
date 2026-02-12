@@ -1,6 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 
+import { Button } from "@/components/ui/button";
+
 export const Route = createFileRoute("/")({
   component: RouteComponent,
   loader({ context: { name } }) {
@@ -23,11 +25,11 @@ function RouteComponent() {
         {" "}
         {data.name}
       </p>
-      <button onClick={() => setCount(count => count + 1)}>
+      <Button onClick={() => setCount(count => count + 1)}>
         count is
         {" "}
         {count}
-      </button>
+      </Button>
     </>
 
   );
